@@ -13,33 +13,14 @@
 
     let result = '';
 
-    if(computerMove === 'Rock') {
-      result = 'TIE.';
-    } else if (computerMove === 'Paper') {
-     result = 'LOSE.';}
-      else if (computerMove === 'Scissors'){
-      result = 'WIN. Congrats!';  
-    }
+    
 
     alert(`You picked Rock. Computer picked 
     ${computerMove}. You ${result}`);
     ">Rock</button> 
   
   <button onclick=" 
-    const computerMove = pickComputerMove();
-    
-    let result = '';
-
-    if(computerMove === 'Rock') {
-      result = 'WIN. Congrats!';
-    } else if (computerMove === 'Paper') {
-    result = 'TIE!';}
-      else if (computerMove === 'Scissors'){
-      result = 'LOSE!';  
-    }
-
-    alert(`You picked Paper. Computer picked 
-    ${computerMove}. You ${result}`);
+    playGame('Paper');
     ">Paper
   </button>
 
@@ -54,18 +35,33 @@
 
       let result = '';
 
-      If(playerMove === 'Scissors') {
-          if(computerMove === 'Rock') {
-          result = 'LOSE!';
+      if(playerMove === 'Scissors'){
+        if(computerMove === 'Rock') {
+        result = 'LOSE!';
         } else if (computerMove === 'Paper') {
-        result = 'WIN! Congrats!';}
-          else if (computerMove === 'Scissors'){
-          result = 'TIE!';  
+        result = 'WIN Congrats!';}
+        else if (computerMove === 'Scissors'){
+        result = 'TIE!';  
+        }
+      }else if (playerMove === 'Paper'){
+        if(computerMove === 'Rock') {
+        result = 'WIN Congrats!';
+        } else if (computerMove === 'Paper') {
+        result = 'TIE!';}
+        else if (computerMove === 'Scissors'){
+        result = 'LOSE!';  
+        }
+      }else if (playerMove === 'Rock') {
+        if(computerMove === 'Rock') {
+        result = 'TIE.';
+        } else if (computerMove === 'Paper') {
+        result = 'LOSE.';}
+        else if (computerMove === 'Scissors'){
+        result = 'WIN Congrats!';  
         }
       }
-      
 
-      alert(`You picked Scissors. Computer picked 
+      alert(`You picked ${playerMove}. Computer picked 
       ${computerMove}. You ${result}`);
     }
 
