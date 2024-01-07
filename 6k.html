@@ -56,8 +56,12 @@
   </button>
 
   <button onclick="
+    if(cartQuantity <= 0){
+      alert('Not enough items in the cart')
+    }else{
     cartQuantity -=1;
     console.log(`Cart quantity: ${cartQuantity}`);
+    }
     ">-1
   </button>
 
