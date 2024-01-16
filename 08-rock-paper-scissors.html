@@ -36,7 +36,7 @@
       Ties: 0
     }
 
-    console.log(localStorage.getItem('message'));
+    console.log(localStorage.getItem('score'));
 
     function playGame(playerMove){
       const computerMove = pickComputerMove();
@@ -79,7 +79,7 @@
         score.Ties += 1;
       }
 
-      localStorage.setItem('message', 'Hello');
+      localStorage.setItem('score', JSON.stringify(score));
 
       alert(`You picked ${playerMove}. Computer picked ${computerMove}. You ${result}
 Wins: ${score.Wins}, Losses: ${score.Losses},Ties: ${score.Ties}`);
