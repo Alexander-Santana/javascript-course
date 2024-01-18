@@ -6,9 +6,15 @@
 
 <body>
   <button>whats up</button>
+  <button class="js-button">2nd Button</button>
+
+
   <script> 
     console.log(document.querySelector('button').innerHTML);
-    document.querySelector('button').innerHTML = 'Thanos Snapped'
+    document.querySelector('button')
+      .innerHTML = 'Thanos Snapped'
+
+    console.log(document.querySelector('.js-button'));
 
 
     /*
