@@ -29,6 +29,7 @@
     score.Losses = 0;
     score.Ties = 0;
     localStorage.removeItem('score');
+    updateScoreElement();
     ">Reset Score
   </button>
 
@@ -39,7 +40,7 @@
       Ties: 0,
     }
 
-    document.querySelector('.js-score').innerHTML = `Wins: ${score.Wins}, Losses: ${score.Losses},Ties: ${score.Ties}`;
+    updateScoreElement();
 
     /*
     if (!score) {
@@ -95,8 +96,15 @@
 
       localStorage.setItem('score', JSON.stringify(score));
 
+      updateScoreElement ();
+
       alert(`You picked ${playerMove}. Computer picked ${computerMove}. You ${result}
 Wins: ${score.Wins}, Losses: ${score.Losses},Ties: ${score.Ties}`);
+    }
+
+    function updateScoreElement() {
+      document.querySelector('.js-score')
+        .innerHTML = `Wins: ${score.Wins}, Losses: ${score.Losses},Ties: ${score.Ties}`;
     }
 
 
