@@ -13,7 +13,11 @@
 </button>
 
 <p>Amazon Shipping Calculator</p>
-<input placeholder="Total Cost" class="js-cost-input" onkeydown="console.log('typing')">
+<input placeholder="Total Cost" 
+class="js-cost-input" onkeydown="
+console.log(event.key);
+
+">
 <button onclick="
   calculateTotal();
 "> Calculate</button>
